@@ -15,35 +15,39 @@
         android:id="@+id/etName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Họ tên"
-        android:layout_marginTop="8dp"/>
+        android:layout_marginTop="8dp"
+        android:hint="Họ tên" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
         android:gravity="end"
-        android:layout_marginTop="16dp">
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/btnAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add"
-            android:layout_marginEnd="8dp"/>
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/button_color"
+            android:textColor="@color/white"
+            android:text="Add" />
 
         <Button
             android:id="@+id/btnUpdate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Update"
-            android:enabled="false"/>
+            android:backgroundTint="@color/button_color"
+            android:textColor="@color/white"
+            android:enabled="false"
+            android:text="Update" />
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp" />
 
 </LinearLayout>

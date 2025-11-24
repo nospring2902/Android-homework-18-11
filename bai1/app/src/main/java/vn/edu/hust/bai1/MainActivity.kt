@@ -1,9 +1,11 @@
 package vn.edu.hust.bai1
+import android.content.res.ColorStateList
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import vn.edu.hust.bai1data.Student
@@ -32,6 +34,10 @@ class MainActivity : AppCompatActivity() {
         btnAdd = findViewById(R.id.btnAdd)
         btnUpdate = findViewById(R.id.btnUpdate)
         recyclerView = findViewById(R.id.recyclerView)
+
+        // Đảm bảo nút Update có cùng màu với nút Add ngay cả khi disabled
+        val buttonColor = ContextCompat.getColor(this, R.color.button_color)
+        btnUpdate.backgroundTintList = ColorStateList.valueOf(buttonColor)
 
         // Khởi tạo dữ liệu mẫu (nếu cần)
         studentList.add(Student("Nguyễn Văn A", "20200001"))
